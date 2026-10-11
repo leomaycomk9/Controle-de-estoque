@@ -1,0 +1,801 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* Página */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* Card */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    background: #1e293b;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Cabeçalho */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+.login-header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* Formulário */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Grupo */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+/* Inputs */
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #475569;
+
+    border-radius: 8px;
+
+    background: #0f172a;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus {
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Botão */
+
+.login-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* Link de cadastro */
+
+.register-link {
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #94a3b8;
+}
+
+.register-link a {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    margin-left: 4px;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+.error-message {
+    color: #f87171;
+
+    font-size: 13px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================
+   PRODUCTS PAGE
+========================= */
+
+.products-page {
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.products-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.products-header h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.products-header p {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.products-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+}
+
+.secondary-button {
+    background: #334155;
+    color: white;
+}
+
+.secondary-button:hover {
+    background: #475569;
+}
+
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+    background: #1e293b;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.product-image-container {
+    width: 100%;
+    height: 220px;
+
+    background: #0f172a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+.product-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h2 {
+    font-size: 20px;
+
+    color: #ffffff;
+
+    margin: 0;
+}
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+.product-details {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #334155;
+}
+
+.product-detail {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.product-detail span {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.product-detail strong {
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+.edit-button,
+.delete-button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+
+    border-radius: 7px;
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.edit-button {
+    background: #334155;
+    color: white;
+}
+
+.edit-button:hover {
+    background: #475569;
+}
+
+.delete-button {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+.my-product-actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 20px;
+}
+
+.my-product-actions form {
+    flex: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .products-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .products-header-actions {
+        width: 100%;
+    }
+
+    .products-header-actions a {
+        flex: 1;
+
+        text-align: center;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   CREATE PRODUCT HEADER
+========================= */
+
+.product-create-header {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+}
+
+.product-create-header h1 {
+    font-size: 32px;
+
+    color: #ffffff;
+
+    margin-bottom: 8px;
+}
+
+.product-create-header p {
+    color: #94a3b8;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================
+   PRODUCT FORM
+========================= */
+
+.product-form {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: #1e293b;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.product-form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.product-form-group label {
+    color: #e2e8f0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.product-form-group input,
+.product-form-group textarea,
+.product-form-group select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #475569;
+
+    border-radius: 8px;
+
+    background: #0f172a;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* Focus */
+
+.product-form-group input:focus,
+.product-form-group textarea:focus,
+.product-form-group select:focus {
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+/* Placeholder */
+
+.product-form-group input::placeholder,
+.product-form-group textarea::placeholder {
+
+    color: #64748b;
+}
+
+/* =========================
+   IMAGE UPLOAD
+========================= */
+
+.image-upload {
+    width: 100%;
+}
+
+
+/* Esconde o input original */
+
+.image-upload-input {
+    display: none;
+}
+
+
+/* Área clicável */
+
+.image-upload-label {
+    width: 100%;
+    min-height: 130px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 2px dashed #475569;
+
+    border-radius: 10px;
+
+    background: #0f172a;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Hover */
+
+.image-upload-label:hover {
+    border-color: #3b82f6;
+
+    background: #111c31;
+}
+
+
+/* Ícone */
+
+.upload-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 26px;
+
+    font-weight: 300;
+}
+
+
+/* Texto */
+
+.upload-text {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.upload-text strong {
+    color: #e2e8f0;
+
+    font-size: 14px;
+}
+
+.upload-text span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.product-form-group textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.product-form-group select {
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   PRICE + QUANTITY
+========================= */
+
+.product-form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.product-submit-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.product-submit-button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.product-submit-button:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   ERRORS
+========================= */
+
+.product-form .error-message {
+
+    color: #f87171;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .product-form {
+
+        padding: 25px 20px;
+
+    }
+
+    .product-form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+
+
