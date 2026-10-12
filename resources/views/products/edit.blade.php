@@ -57,9 +57,8 @@
             <textarea 
                 id="description" 
                 name="description"
-                value="{{ old('description', $product->description) }}"
                 placeholder="Digite a descrição do produto"
-            ></textarea>
+            >{{ old('description', $product->description) }}</textarea>
         </div>
 
         <br>
@@ -94,7 +93,7 @@
                 type="integer" 
                 id="quantity" 
                 name="quantity"
-                value="{{ old('quantidy', $product->quantity) }}"
+                value="{{ old('quantity', $product->quantity) }}"
                 min="0"
             >
         </div>
